@@ -1,15 +1,24 @@
 const express = require('express');
 const router = express.Router();
-const { someFunction } = require('../../middleware/adverts');
+const {
+  someFunction,
+  createAdvert,
+  getAdverts
+} = require('../../middleware/adverts.js');
 
-//@route    Post api/users
-//@desc     Register user
+//@route    Post api/adverts
+//@desc     Add advert
 //@access   Private
-router.post('/', someFunction);
+router.post('/', createAdvert);
 
-//@route    Post api/users
-//@desc     Register user
+//@route    Delete api/adverts
+//@desc     Delete advert
 //@access   Private
-router.post('/login', someFunction);
+router.delete('/', someFunction);
+
+//@route    Get api/adverts
+//@desc     Get adverts
+//@access   Public
+router.get('/', getAdverts);
 
 module.exports = router;

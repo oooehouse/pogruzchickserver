@@ -11,7 +11,10 @@ connectDB();
 app.use(
   express.json({
     extended: false
-  }),
+  })
+);
+
+app.use(
   cors({
     origin: ['https://globaevg.github.io', 'http://localhost:3000']
   })
@@ -21,7 +24,7 @@ app.get('/', (req, res) => res.send('API Running'));
 
 //Define Routes
 app.use('/api/users', require('./routes/api/users'));
-app.use('/api/auth', require('./routes/api/adverts'));
+app.use('/api/adverts', require('./routes/api/adverts'));
 //app.use('/api/feedbacks', require('./routes/api/feedbacks'));
 
 const PORT = process.env.PORT || 5002;

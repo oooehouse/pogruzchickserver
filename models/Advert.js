@@ -3,9 +3,21 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const AdvertSchema = new mongoose.Schema({
-  nameVehicle: {
+  vehicle: {
     type: String,
     required: true
+  },
+  company: {
+    type: String
+  },
+  price: {
+    type: String
+  },
+  phone: {
+    type: String
+  },
+  email: {
+    type: String
   },
   description: {
     type: String
