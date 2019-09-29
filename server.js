@@ -11,16 +11,9 @@ connectDB();
 app.use(
   express.json({
     extended: false
-  })
-);
-
-app.use(
+  }),
   cors({
-    origin: [
-      'https://globaevg.github.io',
-      'http://localhost:8080',
-      'http://localhost:8081'
-    ]
+    origin: ['https://globaevg.github.io', 'http://localhost:3000']
   })
 );
 
