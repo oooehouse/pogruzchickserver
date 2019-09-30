@@ -19,8 +19,7 @@ app.use(
     origin: [
       'https://globaevg.github.io',
       'http://localhost:3000/',
-      'http://pogruzchik-bpi.by/',
-      'https://pogruzchik-bpi.by/'
+      'http://pogruzchik-bpi.by/'
     ]
   })
 );
