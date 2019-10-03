@@ -19,6 +19,7 @@ app.use(
     origin: [
       'https://globaevg.github.io',
       'http://localhost:3000/',
+      'http://localhost:3000',
       'http://pogruzchik-bpi.by/'
     ]
   })
@@ -29,6 +30,7 @@ app.get('/', (req, res) => res.send('API Running'));
 //Define Routes
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/vehicle-adv', require('./routes/api/adverts'));
+app.use('/api/news', require('./routes/api/news'));
 //app.use('/api/feedbacks', require('./routes/api/feedbacks'));
 
 const PORT = process.env.PORT || 5002;
